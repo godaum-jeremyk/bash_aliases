@@ -5,20 +5,23 @@
  Currently only MAC and Linux profiles are supported, 
  Windows will follow soon.
  
- ## Installation
+ ## Installation - Steps to include the aliases to your System 
+ Clone the repository into a folder of your choosing
  
- Steps to include the aliases to your System 
+ Create a Symlink of the .bash_aliases file  located in the the Repository to the Home directory
  
- 1. Clone the repository into a folder of your choosing 
- 2. Open .bashrc file in your $HOME folder
- 3. Add the following line at the end of your .bashrc file
- 
+ ``ln -s path_to_repository_clone/.bash_aliases ~/.bash_aliases
  ``
-    if [ -f $PATH_TO_THE_REPOSITORY/.bash_aliases ]; then
-        . $PATH_TO_THE_REPOSITORY/.bash_aliases
-    fi
-``
+  
+ Open .bashrc file in your $HOME folder
+ Add the following line at the end of your .bashrc file
+```` 
+if [ -f $HOME/.bash_aliases ]; then 
+    . $HOME/.bash_aliases
+fi
+````
 
 ** !Important: Replace $PATH_TO_YOUR_REPOSITORY with the actuall path the ".bash_aliases" file resides in
-4. Restart your terminal to apply the changes
+
+Restart your terminal to apply the changes
      
