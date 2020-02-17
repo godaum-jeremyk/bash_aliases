@@ -9,10 +9,12 @@
  ### Steps to include the aliases to your System 
  Clone the repository into a folder of your choosing
  
- Create a Symlink of the `.bash_aliases` file  located in the the Repository to the Home directory
+ Create a Symlink of the `.bash_aliases` file  located in the the Repository to your Home directory
  
  ``ln -s path_to_repository_clone/.bash_aliases ~/.bash_aliases
  ``
+ 
+ ** !!! Important: !!! Replace `path_to_repository_clone` with the actual path the `.bashrc` file resides in
   
  Add the following line at the end of your `.bashrc` file
 ```` 
@@ -21,7 +23,7 @@ if [ -f $HOME/.bash_aliases ]; then
 fi
 ````
 
-** !Important: Replace $PATH_TO_YOUR_REPOSITORY with the actuall path the ".bash_aliases" file resides in
+
 
 Type ``source ~/.bashrc`` in your terminal and 
 restart the terminal to apply the changes
@@ -32,10 +34,11 @@ restart the terminal to apply the changes
  
  Clone the repository into a folder of your choosing
  
- Create a Symlink of the .bash_aliases file  located in the the Repository to the Home directory
+ Create a Symlink of the `.bash_aliases` file  located in the the Repository to your Home directory
  
  ``ln -s path_to_repository_clone/.bash_aliases ~/.bash_aliases
  ``
+ ** !!! Important: !!! Replace `path_to_repository_clone` with the actual path the `.bash_aliases` file resides in
  
  Add the following line at the end of your `$HOME/.bash_profile` file
 ```` 
@@ -43,7 +46,5 @@ if [ -f $HOME/.bash_aliases ]; then
     . $HOME/.bash_aliases
 fi
 ````
-
-** !Important: Replace $PATH_TO_YOUR_REPOSITORY with the actuall path the ".bash_aliases" file resides in
  
 Restart the terminal to apply the changes 
