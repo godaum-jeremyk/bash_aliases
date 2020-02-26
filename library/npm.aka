@@ -1,0 +1,6 @@
+# NPM Aliases
+alias nrp='npm run production'
+alias nrw='npm run watch'
+alias nrwa='npm run watch-all'
+alias ni='npm run install'
+alias nig='npm run install -g'

@@ -1,0 +1,5 @@
+# Vagrant Aliases
+alias vup="cd ~/Homestead && vagrant up --provision && vagrant ssh"
+alias vh="cd ~/Homestead && vagrant halt"
+alias vs="cd ~/Homestead && vagrant ssh"
+alias tinker="cd ~/Homestead && vagrant ssh && cd ~/fulfillment.shineon.com && art tinker"
