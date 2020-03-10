@@ -1,4 +1,6 @@
-for f in $PWD/library/*; do
+DIR=$(dirname $(readlink ~/.bash_aliases))
+
+for f in $DIR/library/*; do
     . $f
 done
 

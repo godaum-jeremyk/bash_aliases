@@ -1,2 +1,3 @@
 # Miscellanies Aliases
 alias nrk="ngrok http --bind-tls=true -subdomain=jeremy-shineon 8000"
+alias clearlog="cd ~/fulfillment.shineon.com && > storage/logs/laravel.log"
