@@ -21,6 +21,7 @@ alias vup="cd ~/Homestead && vagrant up --provision && vagrant ssh"
 alias vh="cd ~/Homestead && vagrant halt"
 alias vs="cd ~/Homestead && vagrant ssh"
 alias tinker="cd ~/Homestead && vagrant ssh && cd ~/fulfillment.shineon.com && art tinker"
+alias vrstrt="cd ~/Homestead && vagrant halt && cd ~/fulfillment.shineon.com && git pull origin develop && cd ~/Homestead && vagrant up --provision && vagrant ssh"
 
 # ----------------------
 # Docker Aliases
@@ -28,7 +29,19 @@ alias tinker="cd ~/Homestead && vagrant ssh && cd ~/fulfillment.shineon.com && a
 alias dc='docker-compose'
 alias dce='docker-compose exec'
 alias dcu='docker-compose up'
+alias dcud='docker-compose up -d'
 alias dcd='docker-compose down'
+alias dcb='docker-compose build'
+alias dspaf='docker system prune -af'
+
+# ----------------------
+# Docker Functions
+# ----------------------
+
+deb() {
+    local container="$1"
+    "$PWD/docker-compose exec -it $container /bin/bash"
+}
 
 # ----------------------
 # NPM Aliases
@@ -36,7 +49,7 @@ alias dcd='docker-compose down'
 
 alias nrp='npm run production'
 alias nrw='npm run watch'
-alias nrwa='npm run watch-all'
+alias nrwf='npm run watch-full'
 alias ni='npm run install'
 alias nig='npm run install -g'
 
@@ -55,6 +68,7 @@ alias gc='git commit'
 alias gcm='git commit --message'
 alias gcf='git commit --fixup'
 alias gca='git commit -a --amend'
+alias gcmp='git add --all && git commit --message "NPM RUN PRODUCTION"'
 alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gcom='git checkout master'
