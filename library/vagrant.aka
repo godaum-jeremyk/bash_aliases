@@ -1,0 +1,6 @@
+# Vagrant Aliases
+alias vstart="cd ~/Homestead && vagrant up --provision && vagrant ssh"
+alias vhalt="cd ~/Homestead && vagrant halt"
+alias vssh="cd ~/Homestead && vagrant ssh"
+alias vupdate="cd ~/Homestead && vagrant halt && cd ~/fulfillment.shineon.com && git pull origin develop && cd ~/Homestead && vagrant up --provision && vagrant ssh -- -t && cd ~/fulfillment.shineon.com; bash --login"
+alias tinker="cd ~/Homestead && vagrant ssh && cd ~/fulfillment.shineon.com && art tinker"
