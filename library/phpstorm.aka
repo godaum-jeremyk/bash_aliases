@@ -1,0 +1,2 @@
+alias pso='open -a PhpStorm'
+alias psocd='open -a PhpStorm ./'
